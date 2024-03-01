@@ -55,9 +55,10 @@ export const StyledShopMainPage = styled.main`
     flex-direction: column;
     position: sticky;
     top: 10px;
-    gap: 4rem;
+    gap: 3rem;
     padding: 2rem;
     margin-top: 4rem;
+    margin-bottom: 1rem;
     min-width: fit-content;
     border-radius: 1rem;
     align-items: center;
@@ -109,7 +110,7 @@ export const StyledShopMainPage = styled.main`
     width: 100%;
     justify-content: center;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
     label {
       display: flex;
       gap: 0.3rem;
@@ -164,6 +165,7 @@ export const List = styled.ul`
   display: flex;
   flex-wrap: wrap;
   margin: 4rem 0;
+  margin-left: 2rem;
   gap: 2rem;
   justify-content: center;
   @media screen and (width <= 920px) {

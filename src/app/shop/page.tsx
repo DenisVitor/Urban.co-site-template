@@ -48,7 +48,11 @@ const ItemsPage = () => {
   };
 
   const [filters, setFilters] = React.useState<Filters>(() => {
-    const params = new URLSearchParams(window.location.search);
+    let param = "";
+    if (typeof window !== "undefined") {
+      param = window.location.search;
+    }
+    const params = new URLSearchParams(param);
     return {
       search: params.get("search") || "",
       type: params.get("type") || "",
