@@ -11,7 +11,6 @@ import { Filters, Item } from "@/interfaces/item";
 import { FaStar } from "react-icons/fa6";
 import { toast } from "react-toastify";
 import Link from "next/link";
-import { Loading } from "@/components/loadingCard/loading";
 
 const ItemsPage = () => {
   const [list, setList] = React.useState<Item[]>([]);
@@ -120,11 +119,12 @@ const ItemsPage = () => {
     }
 
     const queryString = params.toString();
-
-    const url = queryString
-      ? `${window.location.pathname}?${queryString}`
-      : window.location.pathname;
-    window.history.replaceState({}, "", url);
+    if (typeof window !== "undefined") {
+      const url = queryString
+        ? `${window.location.pathname}?${queryString}`
+        : window.location.pathname;
+      window.history.replaceState({}, "", url);
+    }
   }, [filters]);
 
   return (
