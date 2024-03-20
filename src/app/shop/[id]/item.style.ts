@@ -287,16 +287,21 @@ export const StyledItemMainPage = styled.section`
       display: flex;
       flex-direction: column;
       height: 100%;
-      overflow-y: hidden;
+      overflow-y: auto;
+      overflow-x: hidden;
       scroll-behavior: smooth;
       scroll-snap-stop: always;
       scroll-snap-type: y mandatory;
       gap: 1rem;
+      background: transparent;
 
       &::-webkit-scrollbar {
         appearance: none;
       }
       &::-webkit-scrollbar-thumb {
+        appearance: none;
+      }
+      &::-webkit-scrollbar-button {
         appearance: none;
       }
       .not-selected {
