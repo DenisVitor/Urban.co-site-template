@@ -5,7 +5,7 @@ import styled, { keyframes } from "styled-components";
 export const StyledWhyPage = styled.section`
   .why-title {
     font-size: 3rem;
-    margin: 3rem 0;
+    margin-top: 3rem;
     animation: fadeTop 1s ease 0s 1 normal forwards;
     animation-timeline: view();
     @media screen and (width <= 500px) {
@@ -14,6 +14,17 @@ export const StyledWhyPage = styled.section`
       align-items: center;
     }
   }
+  .why-sec_text {
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    hr {
+      width: 4rem;
+    }
+    margin-bottom: 3rem;
+  }
   .why-sec_list {
     display: flex;
     gap: 5rem;
@@ -21,6 +32,9 @@ export const StyledWhyPage = styled.section`
 `;
 
 const listCycle = keyframes`
+from {
+  transform: translateX(-200%);
+}
   to {
     transform: translateX(200%);
   }
@@ -38,25 +52,32 @@ export const StyledList = styled.ul`
   display: flex;
   margin: 0 4rem;
   width: 90%;
-  justify-content: space-around;
-  gap: 4rem;
-  align-items: start;
-  animation: ${listCycle} 32s ease 0s infinite;
-  animation-timing-function: linear;
-  will-change: transform;
-  &:hover {
-    animation-play-state: paused;
+  padding: 0 4rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 30rem;
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    appearance: none;
+    background-color: var(--white);
+    border-radius: 5rem;
+    max-width: 0.5rem;
+  }
+  &::-webkit-scrollbar-thumb {
+    appearance: none;
+    border-radius: 5rem;
+    background: var(--color-1);
   }
 `;
 
 export const StyledItem = styled.li`
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  height: 15rem;
+  width: 15rem;
   align-items: center;
   gap: 1rem;
-  flex-direction: column;
-  min-height: fit-content;
-  min-width: 20rem;
   svg {
     width: 3rem;
     height: 3rem;
@@ -74,7 +95,7 @@ export const StyledItem = styled.li`
   }
   h2 {
     font-size: 20px;
-    white-space: nowrap;
+    text-align: center;
     color: var(--color-2);
   }
 `;

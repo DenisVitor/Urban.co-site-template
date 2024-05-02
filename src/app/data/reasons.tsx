@@ -106,7 +106,7 @@ export const reasonsToBuy = [
   {
     id: 15,
     title: 'Regular Updates and New Arrivals',
-    description: 'Keep customers engaged by regularly updating your product catalog and notifying them of new arrivals, ensuring they always have something fresh to discover.',
+    description: 'Keep customers engaged by regularly updating your product catalog and notifying them of new arrivals.',
     icon:  <FaPlusSquare />,
   },
 ];

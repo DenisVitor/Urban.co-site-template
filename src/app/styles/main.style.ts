@@ -260,7 +260,7 @@ export const MainSectionThree = styled.section`
   .panel-lists {
     display: flex;
     flex-grow: 1;
-    gap: 4rem;
+    gap: 5rem;
     justify-content: center;
     a {
       all: unset;
@@ -280,8 +280,8 @@ export const MainSectionThree = styled.section`
         transition: 0.05s ease;
         cursor: pointer;
         &:hover {
-          font-weight: var(--fw-600);
-          transform: scale(1.03);
+          color: var(--color-2);
+          transform: scale(1.06);
           border: 1px 0 1px 0 solid var(--color-2);
         }
         &:active {

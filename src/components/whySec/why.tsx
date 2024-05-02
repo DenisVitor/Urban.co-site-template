@@ -9,13 +9,22 @@ export const WhySection = () => {
       <h2 className="why-title">
         Why <span>Urban.co</span>?
       </h2>
+      <div className="why-sec_text">
+        <hr />
+        <p>
+          <i>Check below what we provide</i>
+        </p>
+        <hr />
+      </div>
       <hr className="line-one" />
       <StyledList className="why-sec_list">
         {reasonsToBuy.map((reason: Reasons) => (
           <StyledItem key={reason.id} className="why-sec_item">
             {reason.icon}
             <h2>{reason.title}</h2>
-            <p><i>{reason.description}</i></p>
+            <p>
+              <i>{reason.description}</i>
+            </p>
           </StyledItem>
         ))}
       </StyledList>
