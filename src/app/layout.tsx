@@ -1,4 +1,3 @@
-import { Disclaimer } from "@/components/disclaimer/disclaimer";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { GlobalStyles } from "./styles/global";
@@ -28,7 +27,6 @@ export default function RootLayout({
       <GlobalStyles />
       <body className={inter.className}>
         <ToastContainer style={{fontWeight: "600"}}/>
-        <Disclaimer />
         <Header />
         {children}
         <Footer />
